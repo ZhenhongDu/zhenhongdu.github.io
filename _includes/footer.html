@@ -17,10 +17,11 @@
     &copy; Copyright {{ site.time | date: '%Y' }} {{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}.
     {{ site.footer_text }}
     {% if site.impressum_path %}
-    <a href="{{ site.url }}{{ site.baseurl }}{{ site.impressum_path }}">Impressum</a>.
+    <a href="{{ site.url }}{{ site.baseurl }}{{ site.impressum_path }}">Impressum</a>. 
     {% endif %}
     {% if site.last_updated %}
-    Last updated: {{ "now" | date: '%B %d, %Y' }}.
+    Last updated: {{ "now" | date: '%B %d, %Y' }}.<br>
+    <img src="https://badges.toozhao.com/badges/01H7Q759NH6QM63SQC27Y484AD/green.svg" />
     {% endif %}
   </div>
   <!-- <a href="https://www.easycounter.com/">
@@ -42,5 +43,6 @@
                 class="statcounter" src="//c.statcounter.com/11393308/0/33768b56/0/" alt="web
 analytics"></a></div>
 </noscript> -->
+
 </footer>
 {% endif %}
