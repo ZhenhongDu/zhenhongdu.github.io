@@ -45,8 +45,12 @@ jobs:
           echo "::set-output name=SRC_BRANCH::${GITHUB_REF#refs/heads/}"
         fi
         echo "::set-output name=DEPLOY_BRANCH::gh-pages"
+    - name: Ensure script is executable
+      run: chmod +x bin/deploy
 
     - name: Deploy website 
-      run:  git update-index --chmod=+x yes | bin/deploy --verbose ${{ steps.setup.outputs.NO_PUSH }}
+      run: |
+        chmod +x bin/deploy
+        yes | bin/deploy --verbose ${{ steps.setup.outputs.NO_PUSH }}
                     --src ${{ steps.setup.outputs.SRC_BRANCH }} 
                     --deploy ${{ steps.setup.outputs.DEPLOY_BRANCH }} 
