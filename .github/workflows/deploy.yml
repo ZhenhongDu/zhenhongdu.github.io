@@ -46,10 +46,8 @@ jobs:
         fi
         echo "::set-output name=DEPLOY_BRANCH::gh-pages"
 
-    - name: Ensure script is executable
-      run: chmod +x bin/deploy
-
     - name: Deploy website 
-      run:  yes | bin/deploy --verbose ${{ steps.setup.outputs.NO_PUSH }}
-                    --src ${{ steps.setup.outputs.SRC_BRANCH }} 
-                    --deploy ${{ steps.setup.outputs.DEPLOY_BRANCH }} 
+      if: github.event_name != 'pull_request'
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        folder: _site
