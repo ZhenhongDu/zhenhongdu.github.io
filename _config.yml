@@ -190,7 +190,7 @@ scholar:
   locale: en
 
   source: /_bibliography/
-  bibliography: pubs.bib
+  bibliography: papers.bib
   bibliography_template: bib
   # Note: if you have latex math in your bibtex, the latex filter
   # preprocessing may conflict with MathJAX if the latter is enabled.
@@ -205,6 +205,12 @@ scholar:
   details_link: Details
 
   query: "@*"
+
+# Filter out certain bibtex entry keywords used internally from the bib output
+filtered_bibtex_keywords: [abbr, abstract, arxiv, bibtex_show, html, pdf, selected, supp, blog, code, poster, slides, website, preview]
+
+# Maximum number of authors to be shown, other authors will be visible on hover, leave blank to show all authors
+max_author_limit: 10
 
 
 # -----------------------------------------------------------------------------
@@ -237,7 +243,7 @@ jekyll-diagrams:
 # Optional Features
 # -----------------------------------------------------------------------------
 
-enable_google_analytics:    false  # enables google analytics
+enable_google_analytics:    true  # enables google analytics
 enable_panelbear_analytics: false  # enables panelbear analytics
 enable_mansory:             false   # enables automatic project cards arangement
 enable_math:                true   # enables math typesetting (uses MathJax)
