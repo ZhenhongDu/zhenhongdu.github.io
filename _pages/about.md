@@ -14,7 +14,7 @@ selected_papers: false # includes a list of papers marked as "selected={false}"
 social: false  # includes social icons at the bottom of the page
 ---
 
-Address: Yuhangtang Road No.388, Hangzhou, China<br>Email: zhenhongdu@zju.edu.cn <br>
+Address: Yuhangtang Road No.388, Hangzhou, China<br>Email: `zhenhongdu[at]zju.edu.cn` <br>
 
 [Github](https://github.com/ZhenhongDu)
 
